@@ -1,0 +1,189 @@
+%-------------------------
+% Resume in LaTeX -- Jake's Resume template
+% Template: Jake Gutierrez (https://github.com/jakegut/resume), MIT License
+% Based off of: https://github.com/sb2nov/resume
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.7in}
+\addtolength{\evensidemargin}{-0.7in}
+\addtolength{\textwidth}{1.4in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\titlespacing*{\section}{0pt}{9pt}{8pt}
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \vspace{4pt}\item
+    \begin{tabular*}{\dimexpr0.97\textwidth-0.15in\relax}{l@{\extracolsep{\fill}}r}
+      \textbf{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-2pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeSubRoleListStart}{\begin{itemize}[leftmargin=0.15in, label={}, topsep=0pt, partopsep=0pt, itemsep=0pt, parsep=0pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=3pt, parsep=0pt, topsep=4pt plus 0pt minus 0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Neelay Ranjan} \\ \vspace{1pt}
+    \small \href{mailto:neelay.ranjan@outlook.com}{\underline{neelay.ranjan@outlook.com}} $|$
+    +1 (773) 668-0069 $|$
+    \href{https://linkedin.com/in/neelayranjan}{\underline{linkedin.com/in/neelayranjan}} \\ \vspace{1pt}
+    \small \href{https://github.com/NeelayRanjan}{\underline{github.com/NeelayRanjan}} $|$
+    \href{https://www.neelayranjan.dev}{\underline{neelayranjan.dev}} $|$
+    \href{https://orcid.org/0009-0008-9482-0160}{\underline{orcid.org/0009-0008-9482-0160}}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Purdue University, College of Engineering}{Indianapolis, IN}
+      {B.S. in Artificial Intelligence $\cdot$ Concentration: Intelligent Control \& Systems $\cdot$ Minor: Mathematics}{Expected May 2027}
+      \resumeItemListStart
+        \resumeItem{GPA: 3.68 / 4.0 $\cdot$ John Martinson Honors College $\cdot$ Dean's List $\cdot$ CITI: Biomedical Research, RCR, GCP}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Research \& Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {NASA Ames Research Center}{May 2026 -- Present}
+      {Aviation Systems Division (Code AF)}{Moffett Field / Mountain View, CA}
+      \resumeSubRoleListStart
+        \resumeSubSubheading{GenAI Applied Research Intern, SHIFT}{Aug 2026 -- Present}
+        \resumeItemListStart
+        \resumeItem{Fine-tuned a single 1.7B speech model (Qwen3-ASR) to write the transcript and the structured clearance from air traffic control (ATC) radio audio in one pass. On 967 expert-labeled utterances from six en route centers, each held out in turn, it reaches \textbf{43.4\% exact match vs.\ 27.9\% for a Whisper + T5 cascade}.}
+        \resumeItem{Showed the single model matches a cascade that adds a 27B LLM parser (40.6\%), with no handoff where errors compound.}
+        \resumeItem{Built a synthetic radio speech pipeline (text-to-speech voices, simulated VHF interference, an ASR quality filter) that produced $\sim$277,000 training clips and \textbf{added 7.5 points of exact match} at a 1:3 real-to-synthetic mix.}
+        \resumeItemListEnd
+        \vspace{4pt}
+        \resumeSubSubheading{GenAI Applied Research Intern, SLAAC}{May -- Aug 2026}
+        \resumeItemListStart
+        \resumeItem{Built hazard-aware flight rerouting with diffusion models learned from FAA radar tracks. Guidance applied mid-sampling steers around special-use airspace at inference with no retraining, and \textbf{99\% of reroutes clear the 25 nm hazard buffer at a median +10 nm (1.1\%) added distance}, within 1.2\% of the geometric optimum.}
+        \resumeItem{Designed a flight-plan LLM with a custom tokenizer that synthesizes a full day of \textbf{$\sim$44,000 FAA-managed flights} matched to historical traffic density, producing simulation-ready traffic days for the software NASA and the FAA use to evaluate future air traffic management (ATM) strategies.}
+        \resumeItemListEnd
+      \resumeSubHeadingListEnd
+
+    \resumeSubheading
+      {Regenstrief Institute}{Feb 2024 -- Present}
+      {Research Assistant, Applied Vision AI}{Indianapolis, IN}
+      \resumeItemListStart
+        \resumeItem{Showed an x0 flipped-objective diffusion segmenter outperforms SAM (ViT-B) on benchmark angiograms in ultra-low-data regimes, reaching \textbf{88.2\% Dice with just 16 labels}. Correcting its pre-labels \textbf{cut surgeon labeling time by 46\%} in a five-image pilot.}
+        \resumeItem{Found that a public cerebral artery dataset and our clinical annotators label the same arteries to different lengths, and built a method that infers the target's convention from one to five labeled patients. With one labeled moyamoya patient it reaches \textbf{46.4\% Dice vs.\ 34.3\% for standard fine-tuning}, ahead in all 15 trials.}
+        \resumeItem{Measured the cost of this label-definition shift at up to 0.51 Dice. In a controlled test with known conventions, the method recovered \textbf{98 to 100\% of the Dice reached with the true convention}, against 80 to 92\% for standard fine-tuning.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------PUBLICATIONS-----------
+\section{Selected Publications}
+  \resumeSubHeadingListStart
+    \item[] \begin{itemize}[leftmargin=0.15in, itemsep=3pt, topsep=0pt]
+      \resumeItem{N. Ranjan, S. Dev, A. A. Gonzalez. ``Bootstrapping surgeon labeling campaigns with x0-diffusion: label-efficient vessel segmentation of catheter-based angiograms.'' \textit{medRxiv preprint, 2026, \href{https://doi.org/10.64898/2026.11.13.26368001}{doi:10.64898/2026.11.13.26368001}. Submitted to JAMIA.}}
+      \resumeItem{N. Ranjan et al. ``Where Does the Artery End? Inferring Annotation Conventions for Few-Shot Vessel Labeling.'' \textit{Under review.}}
+      \resumeItem{N. Ranjan, S. Clarke. ``From Radio Audio to Air Traffic Controller Intent: A Single-Model Alternative to ASR-plus-Parser Pipelines.'' \textit{Extended abstract submitted to AIAA AVIATION 2027.}}
+      \resumeItem{Co-author, ``Helical Antenna for Electromagnetic Field Stimulation in Alzheimer's Disease Therapy.'' \textit{IEEE MWSCAS 2026, \href{https://doi.org/10.1109/mwscas67364.2026.11680873}{doi:10.1109/MWSCAS67364.2026.11680873}. Led the PCB design team.}}
+    \end{itemize}
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{Projects \& Applied Research}
+  \resumeSubHeadingListStart
+
+    \resumeProjectHeading
+      {\textbf{Solar-Powered Energy-Based Chess Engine}}{2025}
+      \resumeItemListStart
+        \resumeItem{Trained an energy-based model that scores and ranks moves from a learned energy landscape over game states, reaching \textbf{$\sim$1900--2200 estimated Elo} against a ladder of rated Stockfish depths.}
+        \resumeItem{Embedded the EBM on a Raspberry Pi Zero 2 W ($\sim$1 s per move) as a standalone chess engine \textbf{powered solely by onboard solar \& supercapacitors}. Quantization tests showed FP32 beat INT8 on ARM, which had no native INT8 kernels.}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{LLM Design Team Lead, V2X Aircraft Maintenance Assistant (Raytheon divestiture)}}{Aug 2024 -- May 2025}
+      \resumeItemListStart
+        \resumeItem{Led design and fine-tuning of a maintenance-assistant LLM whose two-stage RAG pipeline picks sources from their summaries, then pinpoints and quotes the relevant section, \textbf{cutting hallucinations from $\sim$40\% to $\sim$5\%}.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Generative modeling}{: diffusion (x0 / v-prediction), energy-based models, foundation-model adaptation (SAM), transformers, LLM fine-tuning \& RAG, safety-critical AI, interpretability, multimodal pipelines} \\
+     \textbf{ML engineering}{: Python, C/C++, CUDA, PyTorch, transfer learning, medical image segmentation, quantization, Docker, Slurm / H100, W\&B, Linux / cluster administration, Git} \\
+     \textbf{Hardware / edge}{: PCB design, ultra-low-power inference, embedded ML}
+    }}
+ \end{itemize}
+
+%-------------------------------------------
+\end{document}
